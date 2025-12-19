@@ -1,0 +1,12 @@
+{"id": "q1", "question": "Quelles sont les conditions générales pour la formation d’un contrat (offre et acceptation) ?", "relevant_ids": ["doc_contract_01"]}
+{"id": "q2", "question": "Si une partie cache une information importante pendant la négociation, quel principe peut être invoqué ?", "relevant_ids": ["doc_contract_02"]}
+{"id": "q3", "question": "Quels sont les remèdes typiques en cas d’inexécution contractuelle ?", "relevant_ids": ["doc_contract_03"]}
+{"id": "q4", "question": "Quels éléments une due diligence en M&A examine-t-elle généralement ?", "relevant_ids": ["doc_corp_03"]}
+{"id": "q5", "question": "Quelles sont les bases légales possibles d’un traitement de données personnelles ?", "relevant_ids": ["doc_gdpr_02"]}
+{"id": "q6", "question": "Quels sont quelques droits des personnes au titre du RGPD ?", "relevant_ids": ["doc_gdpr_03"]}
+{"id": "q7", "question": "Que doit contenir ou préciser une clause de limitation de responsabilité ?", "relevant_ids": ["doc_drafting_01"]}
+{"id": "q8", "question": "Qu’est-ce que le risque d’hallucination dans un système RAG et comment le réduire ?", "relevant_ids": ["doc_risk_01"]}
+{"id": "q9", "question": "Quels sont les éléments constitutifs d’une infraction ?", "relevant_ids": ["doc_crim_02"]}
+{"id": "q10", "question": "En contentieux civil, sur qui repose en principe la charge de la preuve ?", "relevant_ids": ["doc_lit_01"]}
+{"id": "q11", "question": "Pourquoi la confidentialité est-elle critique pour un chatbot interne au cabinet ?", "relevant_ids": ["doc_ethics_01"]}
+{"id": "q12", "question": "Quels sont les principes clés de protection des données (RGPD) ?", "relevant_ids": ["doc_gdpr_01"]}
