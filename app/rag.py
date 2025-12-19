@@ -199,8 +199,8 @@ class LegalRAG:
 
         with TRACER.start_as_current_span("generation") as span:
             span.set_attribute("provider", provider)
-            if provider == "openai":
-                return self._generate_openai(question, chunks)
+            if provider == "gemini":
+                return self._generate_gemini(question, chunks)
             if provider == "ollama":
                 return self._generate_ollama(question, chunks)
             return self._generate_mock(question, chunks)
@@ -227,15 +227,15 @@ class LegalRAG:
         )
         return answer
 
-    def _generate_openai(self, question: str, chunks: List[Chunk]) -> str:
-        # Uses OpenAI Chat Completions; kept lightweight to avoid framework lock-in.
+    def _generate_gemini(self, question: str, chunks: List[Chunk]) -> str:
+        # Uses gemini Chat Completions; kept lightweight to avoid framework lock-in.
         try:
-            from openai import OpenAI
+            from gemini import gemini
         except Exception as e:
-            return f"OpenAI SDK non installé. Installez `openai` ou utilisez LLM_PROVIDER=mock. Détail: {e}"
+            return f"gemini SDK non installé. Installez `gemini` ou utilisez LLM_PROVIDER=mock. Détail: {e}"
 
-        if not self.settings.openai_api_key:
-            return "OPENAI_API_KEY manquant. Configurez-le ou utilisez LLM_PROVIDER=mock."
+        if not self.settings.gemini_api_key:
+            return "gemini_API_KEY manquant. Configurez-le ou utilisez LLM_PROVIDER=mock."
 
         ctx = self._format_context(chunks)
         system = (
@@ -247,9 +247,9 @@ class LegalRAG:
         )
         user = f"QUESTION: {question}\n\nCONTEXTE:\n{ctx}"
 
-        client = OpenAI(api_key=self.settings.openai_api_key)
+        client = gemini(api_key=self.settings.gemini_api_key)
         resp = client.chat.completions.create(
-            model=self.settings.openai_model,
+            model=self.settings.gemini_model,
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": user},

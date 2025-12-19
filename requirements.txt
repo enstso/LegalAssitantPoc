@@ -16,5 +16,5 @@ opentelemetry-sdk>=1.24
 opentelemetry-exporter-otlp-proto-http>=1.24
 opentelemetry-instrumentation-fastapi>=0.45b0
 opentelemetry-instrumentation-requests>=0.45b0
-
+google-genai
 streamlit>=1.36
